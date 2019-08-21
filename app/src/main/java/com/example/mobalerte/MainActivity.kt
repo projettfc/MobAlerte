@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 
+
+
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -65,16 +67,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_home -> {
+            R.id.nav_profil-> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
+            R.id.nav_commissariat -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.nav_localisez -> {
 
             }
-            R.id.nav_tools -> {
+            R.id.nav_login -> {
+
+            }
+            R.id.nav_histoire -> {
+
+            }
+            R.id.nav_partenaire -> {
 
             }
             R.id.nav_share -> {
