@@ -1,5 +1,6 @@
 package com.example.mobalerte
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -61,16 +62,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+
         }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_profil-> {
+            R.id.nav_acceuil-> {
                 // Handle the camera action
             }
-            R.id.nav_commissariat -> {
+            R.id.nav_profil -> {
+
 
             }
             R.id.nav_localisez -> {
@@ -85,10 +88,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_partenaire -> {
 
             }
-            R.id.nav_share -> {
+            R.id.nav_deconnexion -> {
 
             }
             R.id.nav_send -> {
+                val intent = Intent()
+                intent.type = "text/plain"
+                intent.action = Intent.ACTION_SEND
+                val envoyercors = "jésus vous aime"
+                val envoyerObjet = "votre objet ici"
+                intent.putExtra(Intent.EXTRA_SUBJECT, envoyerObjet)
+                intent.putExtra(Intent.EXTRA_TEXT, envoyercors)
+                startActivity(Intent.createChooser(intent, "Partager via"))
+                return true
 
             }
         }

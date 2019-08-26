@@ -5,13 +5,13 @@
 
     <group android:checkableBehavior="single">
         <item
+                android:id="@+id/nav_acceuil"
+                android:icon="@drawable/ic_home"
+                android:title="Acceuil"/>
+        <item
                 android:id="@+id/nav_profil"
                 android:icon="@drawable/ic_man"
-                android:title="@string/menu_home"/>
-        <item
-                android:id="@+id/nav_commissariat"
-                android:icon="@drawable/ic_home"
-                android:title="@string/menu_gallery"/>
+                android:title="Profil"/>
         <item
                 android:id="@+id/nav_localisez"
                 android:icon="@drawable/ic_map"
@@ -35,13 +35,13 @@
     <item android:title="Communicate">
         <menu>
             <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/menu_share"/>
+                    android:id="@+id/nav_deconnexion"
+                    android:icon="@drawable/ic_power"
+                    android:title="Déconnexion"/>
             <item
                     android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/menu_send"/>
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Partager"/>
         </menu>
     </item>
 
